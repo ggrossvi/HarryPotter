@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		387662562B9B0EAC00C61D7F /* HarryPotterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387662552B9B0EAC00C61D7F /* HarryPotterApp.swift */; };
-		387662582B9B0EAC00C61D7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387662572B9B0EAC00C61D7F /* ContentView.swift */; };
+		387662582B9B0EAC00C61D7F /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387662572B9B0EAC00C61D7F /* CharacterListView.swift */; };
 		3876625A2B9B0EB500C61D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387662592B9B0EB500C61D7F /* Assets.xcassets */; };
 		3876625D2B9B0EB500C61D7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3876625C2B9B0EB500C61D7F /* Preview Assets.xcassets */; };
+		387662672B9B0FB700C61D7F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387662662B9B0FB700C61D7F /* Character.swift */; };
+		387662692B9B104100C61D7F /* Wand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387662682B9B104100C61D7F /* Wand.swift */; };
+		38EA3DAC2BB47FA60094A877 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EA3DAB2BB47FA60094A877 /* CharacterListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		387662522B9B0EAC00C61D7F /* HarryPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387662552B9B0EAC00C61D7F /* HarryPotterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterApp.swift; sourceTree = "<group>"; };
-		387662572B9B0EAC00C61D7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		387662572B9B0EAC00C61D7F /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		387662592B9B0EB500C61D7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3876625C2B9B0EB500C61D7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		387662662B9B0FB700C61D7F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		387662682B9B104100C61D7F /* Wand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wand.swift; sourceTree = "<group>"; };
+		38EA3DAB2BB47FA60094A877 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,10 @@
 		387662542B9B0EAC00C61D7F /* HarryPotter */ = {
 			isa = PBXGroup;
 			children = (
+				387662652B9B0F5B00C61D7F /* Networking */,
+				387662642B9B0F4D00C61D7F /* Models */,
+				387662632B9B0F3300C61D7F /* Scenes */,
 				387662552B9B0EAC00C61D7F /* HarryPotterApp.swift */,
-				387662572B9B0EAC00C61D7F /* ContentView.swift */,
 				387662592B9B0EB500C61D7F /* Assets.xcassets */,
 				3876625B2B9B0EB500C61D7F /* Preview Content */,
 			);
@@ -65,6 +73,39 @@
 				3876625C2B9B0EB500C61D7F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		387662632B9B0F3300C61D7F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3876626A2B9B118E00C61D7F /* CharacterList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		387662642B9B0F4D00C61D7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				387662662B9B0FB700C61D7F /* Character.swift */,
+				387662682B9B104100C61D7F /* Wand.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		387662652B9B0F5B00C61D7F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3876626A2B9B118E00C61D7F /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				387662572B9B0EAC00C61D7F /* CharacterListView.swift */,
+				38EA3DAB2BB47FA60094A877 /* CharacterListViewModel.swift */,
+			);
+			path = CharacterList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				387662582B9B0EAC00C61D7F /* ContentView.swift in Sources */,
+				387662672B9B0FB700C61D7F /* Character.swift in Sources */,
+				387662582B9B0EAC00C61D7F /* CharacterListView.swift in Sources */,
 				387662562B9B0EAC00C61D7F /* HarryPotterApp.swift in Sources */,
+				38EA3DAC2BB47FA60094A877 /* CharacterListViewModel.swift in Sources */,
+				387662692B9B104100C61D7F /* Wand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
