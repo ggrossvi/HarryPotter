@@ -6,9 +6,10 @@
 //
 
 import Foundation
-struct Wand {
+// In order to convert/decode json into Character and Wand objects, we need Wand and Character models to conform Decodable. 
+struct Wand: Decodable {
     let wood: String
     let core: String
-    let length: Double
+    let length: Double?
     
 }

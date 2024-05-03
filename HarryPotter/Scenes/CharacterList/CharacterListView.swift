@@ -14,9 +14,41 @@ struct CharacterListView: View {
     //2) viewModel property declared as @Published(property wrapper) in this case characters for example @Published var characters:[Character]
     //3) instance of the viewModel in the View must be declared as @ObservedObject for example  @ObservedObject var viewModel
     var body: some View {
-        List(viewModel.characters) { character in
-            /*@START_MENU_TOKEN@*/Text(character.name)/*@END_MENU_TOKEN@*/
-        }.onAppear {
+        VStack{
+            switch viewModel.state{
+            case .loading:
+                ProgressView()
+            case .success(let characters):
+                List(characters) { character in
+                    HStack{
+                        // character image is url so it's a string. Async Image has a constructor that requires URL
+                        AsyncImage(url: URL(string: character.image)) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 96, height: 96)
+                        VStack (alignment: .leading){
+                            /*@START_MENU_TOKEN@*/Text(character.name)/*@END_MENU_TOKEN@*/
+                            Text(character.house)
+                            Text(character.wand.wood)
+                            Text(character.wand.core)
+                            //Text(character.wand.length)
+                            // if length exists
+                            if let length = character.wand.length{
+                                // stringifies the expression
+                                Text("\(length)")
+                            }
+                        }
+                    }
+                    
+                }
+            case .empty:
+                Text("No Characters Found")
+            default: EmptyView()
+            }
+        }
+        .onAppear {
             viewModel.loadCharacters()
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382921122BBEFE5A00C8ECE9 /* CharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382921112BBEFE5A00C8ECE9 /* CharactersService.swift */; };
 		387662562B9B0EAC00C61D7F /* HarryPotterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387662552B9B0EAC00C61D7F /* HarryPotterApp.swift */; };
 		387662582B9B0EAC00C61D7F /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387662572B9B0EAC00C61D7F /* CharacterListView.swift */; };
 		3876625A2B9B0EB500C61D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387662592B9B0EB500C61D7F /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382921112BBEFE5A00C8ECE9 /* CharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersService.swift; sourceTree = "<group>"; };
 		387662522B9B0EAC00C61D7F /* HarryPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387662552B9B0EAC00C61D7F /* HarryPotterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterApp.swift; sourceTree = "<group>"; };
 		387662572B9B0EAC00C61D7F /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		387662652B9B0F5B00C61D7F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				382921112BBEFE5A00C8ECE9 /* CharactersService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				387662672B9B0FB700C61D7F /* Character.swift in Sources */,
+				382921122BBEFE5A00C8ECE9 /* CharactersService.swift in Sources */,
 				387662582B9B0EAC00C61D7F /* CharacterListView.swift in Sources */,
 				387662562B9B0EAC00C61D7F /* HarryPotterApp.swift in Sources */,
 				38EA3DAC2BB47FA60094A877 /* CharacterListViewModel.swift in Sources */,
