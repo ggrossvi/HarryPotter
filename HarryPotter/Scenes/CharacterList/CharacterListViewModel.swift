@@ -27,20 +27,23 @@ class CharacterListViewModel :ObservableObject{
         //view will ask view model, view model is calling characters service then it calls completion of view model, characters is assigned to view models characters
         charactersService.getCharacters{result in
             // move to main thread - switch threads
-            
-            DispatchQueue.main.async {
+            // weak self means it can be removed from the memory
+            DispatchQueue.main.async {[weak self] in
                 // need to change State to success
                 //self.characters = characters
                 switch result {
                 case .success(let characters):
                     if characters.isEmpty {
-                        self.state = .empty
+                        self?.state = .empty
                     } else {
-                        self.state = .success(characters)
+                        self?.state = .success(characters)
                     }
                     
-                case .failure:
-                    self.state = .error("Something went Wrong")
+                case .failure(let error):
+                    switch error {
+                    case .general:
+                        self?.state = .error("Something went Wrong")
+                    }
                 }
                 
             }

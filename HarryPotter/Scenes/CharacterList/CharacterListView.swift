@@ -45,7 +45,9 @@ struct CharacterListView: View {
                 }
             case .empty:
                 Text("No Characters Found")
-            default: EmptyView()
+            case .error(let message):
+                Text(message)
+                    .foregroundColor(Color.red)
             }
         }
         .onAppear {

@@ -29,6 +29,9 @@ class CharacterService {
                 
             }, receiveValue: { data, _ in
                 // if successful decoded prints - json decode to object (array of Characters)
+                //mock failure
+                //completion(.failure(.general))
+                //return
                 if let characters = try? JSONDecoder().decode([Character].self, from: data) {
                     completion(.success(characters))
                     //print(characters)
